@@ -1,9 +1,11 @@
 package org.compose_projects.find_devices_on_network.core
 
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
+import org.compose_projects.find_devices_on_network.core.get_devices_wifi.GetDevicesWifi
+import org.compose_projects.find_devices_on_network.core_get_devices_hotspot.GetDevicesHostPot
 
-@Composable
-fun GetDevices() {
-    Text(text = "Hola desde core")
+class GetDevices {
+    fun getAllDeviceWifi(): List<Int> {
+        val listAllDevices = GetDevicesHostPot().getDevicesHotsPot() + GetDevicesWifi().getDeviceWifi()
+        return listAllDevices
+    }
 }

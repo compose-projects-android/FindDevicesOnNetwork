@@ -46,19 +46,14 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
-    }
+
 }
 
 dependencies {
 
-    //compose
-    implementation(libs.androidx.material3)
-    implementation(platform(libs.androidx.compose.bom))
+    //implementation getDevices
+    implementation(project(":core-getDevicesHotsPot"))
+    implementation(project(":core-getDevicesWifi"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
