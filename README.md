@@ -2,7 +2,7 @@
 <p align="center">
 <img src="https://github.com/compose-projects-android/FindDevicesOnNetwork/assets/166412593/50b895ee-b23a-4559-9004-64c8333787c0" width="150">
 </p>
-<h3 align="center">Una librería/aplicación <br> para escanear dispositvos en una misma red</h3>
+<h3 align="center">Una librería/aplicación <br> para escanear dispositivos en una misma red</h3>
 
 1. [`CÓMO CONTRIBUIR`](#Contribuciones)  
   1.1 [Bifurque el proyecto](#configuración-del-proyecto)
