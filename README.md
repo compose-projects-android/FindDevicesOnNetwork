@@ -30,6 +30,7 @@
 3. [`ESPECIFICACIONES TÉCNICAS`](#especificaciones-técnicas)
 
       2.1 [Tecnologias](#-tecnologías)
+      2.2 [Arquitectura](#-gráfico-arquitectura-find-devices-on-network-)
 
    
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
@@ -120,6 +121,10 @@ git push -u origin <name_your_branch>
   <a href="https://developer.android.com/training/data-storage/room?hl=es-419">
     <img src="https://img.shields.io/badge/-Room-red?style=flat-square&logo=database&logoColor=white" width="80" height="30" />
   </a>
+
+  <h3 align="center">🧑‍🏫 Gráfico Arquitectura Find Devices On Network</h3>
+
+  ![arquitecturas](https://github.com/compose-projects-android/FindDevicesOnNetwork/blob/master/findDevicesOnNetwork.svg)
 
 </p>
 
