@@ -19,13 +19,25 @@ package org.compose_projects.find_devices_on_network
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.material3.Text
 import org.compose_projects.find_devices_on_netkork.find_devices_on_network.GetALlDevices
+import org.compose_projects.find_devices_on_netkork.find_devices_on_network.NetworkManager
 
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            GetALlDevices()
+            val networkManager = NetworkManager(this)
+            
+            LazyColumn {
+                itemsIndexed(networkManager.devicesWifi()){index, ip ->
+                    Text(text = "(${index + 1}) $ip ")
+                }
+            }
+            //GetALlDevices(context = this)
         }
     }
 }
