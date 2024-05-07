@@ -19,10 +19,10 @@ package org.compose_projects.find_devices_on_network
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.Text
-import org.compose_projects.find_devices_on_netkork.find_devices_on_network.GetALlDevices
 import org.compose_projects.find_devices_on_netkork.find_devices_on_network.NetworkManager
 
 class MainActivity : ComponentActivity() {
@@ -31,13 +31,22 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             val networkManager = NetworkManager(this)
-            
-            LazyColumn {
-                itemsIndexed(networkManager.devicesWifi()){index, ip ->
-                    Text(text = "(${index + 1}) $ip ")
+            val devicesWifi = networkManager.devicesWifi()
+            val devicesHotsPot = networkManager.devicesHotsPot()
+
+            Row {
+                LazyColumn {
+                    itemsIndexed(devicesWifi) { index, ip ->
+                        Text(text = "(${index + 1}) $ip ")
+                    }
+                }
+                LazyColumn {
+                    itemsIndexed(devicesHotsPot) { index, ip ->
+                        Text(text = "(${index + 1}) $ip ")
+                    }
                 }
             }
-            //GetALlDevices(context = this)
+
         }
     }
 }

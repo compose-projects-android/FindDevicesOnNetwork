@@ -7,9 +7,15 @@ import org.compose_projects.find_devices_on_network.core_get_devices_hotspot.Get
 class GetDevices {
 
     fun getDevicesWifi(context: Context): List<String> =
-        GetDevicesWifi().getDeviceWifi(
+        GetDevicesWifi().scanWifi(
             context = context,
             prefix = "192.168.100."
+        )
+
+    fun getDevicesHotsPot(context: Context): List<String> =
+        GetDevicesHostPot().scanHotsPot(
+            context = context,
+            prefix = "10.10.10."
         )
 
 

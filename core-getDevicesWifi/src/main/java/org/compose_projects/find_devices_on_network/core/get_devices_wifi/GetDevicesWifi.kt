@@ -5,7 +5,6 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
-import android.widget.Toast
 
 class GetDevicesWifi {
 
@@ -30,7 +29,7 @@ class GetDevicesWifi {
         }
 
     }
-    fun getDeviceWifi(context: Context, prefix: String): List<String> {
+    fun scanWifi(context: Context, prefix: String): List<String> {
         val stateNetWork = checkNetworkState(context)
         val ipDevices = mutableListOf<String>()
         (0..90).forEach {
