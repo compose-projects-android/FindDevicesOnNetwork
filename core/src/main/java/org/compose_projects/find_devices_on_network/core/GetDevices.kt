@@ -23,7 +23,6 @@ class GetDevices {
             prefix = getPrefixDevices(context)
         )
 
-
 }
 
 

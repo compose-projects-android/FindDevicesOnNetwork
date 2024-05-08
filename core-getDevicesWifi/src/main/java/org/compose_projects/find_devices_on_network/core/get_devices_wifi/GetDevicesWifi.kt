@@ -6,13 +6,13 @@ import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
 
+@Suppress("DEPRECATION")
 class GetDevicesWifi {
 
     @SuppressLint("MissingPermission")
     fun checkNetworkState(context: Context) : Boolean {
         val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
 
-        // Para versiones de API 23 o superior
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             val network = connectivityManager.activeNetwork ?: return false
             val actNw = connectivityManager.getNetworkCapabilities(network) ?: return false
@@ -32,11 +32,15 @@ class GetDevicesWifi {
     fun scanWifi(context: Context, prefix: String): List<String> {
         val ipDevices = mutableListOf<String>()
         val stateNetWork = checkNetworkState(context)
+
         if (stateNetWork){
+            //hacer escaneo de todo
 
         }else{
 
+            //hacer lo contrario
         }
+
         (0..90).forEach {
             ipDevices.add(prefix + it)
         }
@@ -44,3 +48,4 @@ class GetDevicesWifi {
     }
 
 }
+
