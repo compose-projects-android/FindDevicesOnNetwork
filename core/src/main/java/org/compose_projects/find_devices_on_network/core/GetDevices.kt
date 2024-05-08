@@ -23,7 +23,11 @@ class GetDevices {
             prefix = getPrefixDevices(context)
         )
 
+
 }
+
+
+
 
 
 private fun getWifiIpAddress(context: Context): String {
@@ -41,4 +45,5 @@ private fun getWifiIpAddress(context: Context): String {
         ""
     }
 }
+
 

@@ -55,6 +55,9 @@ dependencies {
     implementation(project(":core-getDevicesHotsPot"))
     implementation(project(":core-getDevicesWifi"))
 
+    implementation(libs.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
