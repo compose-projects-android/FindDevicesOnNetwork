@@ -23,16 +23,16 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.Text
-import org.compose_projects.find_devices_on_netkork.find_devices_on_network.NetworkManager
+import org.compose_projects.find_devices_on_netkork.find_devices_on_network.FindDevicesManager
 
 class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            val networkManager = NetworkManager(this)
-            val devicesWifi = networkManager.devicesWifi()
-            val devicesHotsPot = networkManager.devicesHotsPot()
+            val findDevicesManager = FindDevicesManager(this)
+            val devicesWifi = findDevicesManager.devicesWifi()
+            val devicesHotsPot = findDevicesManager.devicesHotsPot()
 
             Row {
                 LazyColumn {

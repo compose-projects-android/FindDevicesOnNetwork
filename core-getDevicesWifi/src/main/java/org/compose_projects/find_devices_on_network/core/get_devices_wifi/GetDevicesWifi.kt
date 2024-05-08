@@ -30,8 +30,13 @@ class GetDevicesWifi {
 
     }
     fun scanWifi(context: Context, prefix: String): List<String> {
-        val stateNetWork = checkNetworkState(context)
         val ipDevices = mutableListOf<String>()
+        val stateNetWork = checkNetworkState(context)
+        if (stateNetWork){
+
+        }else{
+
+        }
         (0..90).forEach {
             ipDevices.add(prefix + it)
         }
