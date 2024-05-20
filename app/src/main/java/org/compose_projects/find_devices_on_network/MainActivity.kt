@@ -40,11 +40,13 @@ class MainActivity : ComponentActivity() {
                         Text(text = "(${index + 1}) $ip ")
                     }
                 }
-                LazyColumn {
+                /*LazyColumn {
                     itemsIndexed(devicesHotsPot) { index, ip ->
                         Text(text = "(${index + 1}) $ip ")
                     }
                 }
+
+                 */
             }
 
         }
