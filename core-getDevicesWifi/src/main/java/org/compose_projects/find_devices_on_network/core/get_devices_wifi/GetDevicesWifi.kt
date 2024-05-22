@@ -72,7 +72,6 @@ class GetDevicesWifi {
             val future = executor.submit {
                 try {
                     val process = Runtime.getRuntime().exec("ping -c 1 $ip")
-                    val reader = process.inputStream.bufferedReader()
                     val exitVal = process.waitFor()
 
                     // Si el proceso termina correctamente, la IP responde al ping
